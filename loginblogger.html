@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'/>
+<meta content='width=device-width,minimum-scale=1,initial-scale=1' name='viewport'/>
+<meta content='IE=9; IE=8; IE=7; IE=EDGE; chrome=1' http-equiv='X-UA-Compatible'/>
+<meta content='953780238767-l5jlcvvmiafnm93scs5vs2trohr2qt4k.apps.googleusercontent.com' name='google-signin-client_id'/>
+<title>Login CPanel</title>
+<link href='https://fonts.googleapis.com/css?family=Roboto:300,300i,500,500i,700,900' rel='stylesheet' type='text/css'/>
+<style type='text/css'>
+body{background:#fff;color:#555555;text-transform:uppercase;font-family:Roboto,Arial,sans-serif;font-size:100%;text-align:left;margin:0}
+a:link{text-decoration:none}
+#loginblog .btn-info{margin:0 0 0 20px;}
+.blog-admin a.btn-danger{margin: 0 0px 0 20px;z-index: 2;position: absolute;top: 4px;right: 0;}
+.post #innerlogin,.blog-admin{display:none}
+#innerlogin{display:inline-block;}
+a.btn-danger,a.btn-info,a.btn-primary,a.btn-success,a.btn-warning{color:#fff!important}
+.btn,.btn:active{background-image:none}
+.btn{font-weight:400}
+.btn{display:inline-block;padding:6px 12px;margin-bottom:5px;font-size:14px;line-height:1.42857143;text-align:center;white-space:nowrap;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border:1px solid transparent;border-radius:4px}
+.btn:active:focus,.btn:focus{outline:0}
+.btn:focus,.btn:hover{color:#333;text-decoration:none;outline:0}
+.btn:active{outline:0;-webkit-box-shadow:inset 0 3px 5px rgba(0,0,0,.125);box-shadow:inset 0 3px 5px rgba(0,0,0,.125)}
+.btn-info{color:#fff!important;background-color:#5bc0de;border-color:#46b8da}
+.btn-info:focus{color:#fff;background-color:#31b0d5;border-color:#1b6d85}
+.btn-info:active,.btn-info:hover{color:#fff;background-color:#31b0d5;border-color:#269abc}
+.btn-danger{color:#fff!important;background-color:#d9534f;border-color:#d43f3a}
+.btn-danger:focus{color:#fff;background-color:#c9302c;border-color:#761c19}
+.btn-danger:active,.btn-danger:hover{color:#fff;background-color:#c9302c;border-color:#ac2925}
+.btn-xs{font-size:12px;line-height:1.5;border-radius:3px;padding:1px 5px}
+#gSignIn,#gSignIn>div{margin:0 auto}
+#gSignIn{width:100%}
+.log_in .profile{background:#fff;border:1px solid #ccc;border-color:rgba(0,0,0,.2);color:#000;-webkit-box-shadow:0 2px 10px rgba(0,0,0,.2);box-shadow:0 2px 10px rgba(0,0,0,.2);outline:0;overflow:hidden;-webkit-border-radius:2px;border-radius:2px;padding:10px;margin:10px auto 0;width:350px;height:auto;text-align:left}
+.log_in .profile p{margin:0}
+.log_in .profile p.button_login{margin:10px 0 0}
+.log_in .head{margin-bottom:10px}
+.log_in .head a{float:right}
+.log_in .profile img{width:100px;float:left;margin:0 10px 10px 0}
+.log_in .proDetails{float:left}
+.log_in h3{margin:0 auto 40px}
+.login_box{}
+.log_in{width:100%;}
+.log_in .tombol_close{color:#efefef;position:absolute;top:10px;right:10px;font-family:Arial;font-size:40px;font-weight:lighter;width:20px;height:20px;line-height:20px;text-align:center;text-decoration:none;}
+
+@media screen and (max-width:414px){
+.log_in .profile{width:90%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+.log_in .proDetails{font-size:12px!important;line-height:1.1}
+.log_in .profile img{width:60px;}
+}
+@media screen and (max-width:375px){
+.abcRioButton{width:100%!important;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+.abcRioButtonContents{font-size:14px!important}
+.log_in .profile img{width:40px;}
+}
+@media screen and (max-width:320px){
+.log_in .proDetails{font-size:10px!important;line-height:1.1}
+}
+</style>
+</head>
+
+<body>
+<div class="login_box">
+<div class="log_in">
+<div style="text-align: center;margin:50px auto 0">
+<!--<img alt="Logo" class="logo" width="50" height="50" src="data:image/png;base64,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" />-->
+<h3>Login to CPanel</h3>
+<!-- HTML for render Google Sign-In button -->
+<div id="gSignIn"></div>
+<!-- HTML for displaying user details -->
+<div class="userContent"></div>
+</div>
+<!--<a class="tombol_close" href="https://jual-belionlineku.blogspot.com/" title="Homepage">×</a>-->
+</div>
+</div>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js' type='text/javascript'></script>
+<script async="" defer="" src="https://apis.google.com/js/platform.js"></script>
+<script async="" defer="" src="https://apis.google.com/js/client:platform.js?onload=renderButton"></script>
+<script>
+//<![CDATA[
+ function onSuccess(googleUser) {
+    var profile = googleUser.getBasicProfile();
+    gapi.client.load('plus', 'v1', function () {
+        var request = gapi.client.plus.people.get({
+            'userId': 'me'
+        });
+        //Display the user details
+        request.execute(function (resp) {
+            var profileHTML = '<div class="profile"><div class="head">Welcome '+resp.name.givenName+'! <a class="btn btn-danger btn-xs" href="https://blibliblogger.blogspot.com/logout?d=https://draft.blogger.com/logout-redirect.g?blogID%3D6096146444989354597" target="_blank" rel="noopener" onclick="signOut();">Sign out</a></div>';
+            profileHTML += '<img src="'+resp.image.url+'"/><div class="proDetails"><p>Name: '+resp.displayName+'</p><p>Email: '+resp.emails[0].value+'</p><p>Gender: '+resp.gender+'</p><p class="button_login"><a class="btn btn-info btn-xs" href="https://draft.blogger.com/blogger.g?blogID=8258721170595471338" target="_blank">Dashboard</a> <a class="btn btn-info btn-xs" href="https://draft.blogger.com/blogger.g?blogID=8258721170595471338#editor" target="_blank">New Post</a><br/><a class="btn btn-info btn-xs" href="'+resp.url+'">View Google+ Profile</a></p></div><div class="clear"></div></div>';
+            $('.userContent').html(profileHTML);
+            $('#gSignIn').slideUp('slow');
+        });
+    });
+}
+function onFailure(error) {
+    alert(error);
+}
+function renderButton() {
+    gapi.signin2.render('gSignIn', {
+        'scope': 'profile email',
+        'width': 240,
+        'height': 50,
+        'longtitle': true,
+        'theme': 'dark',
+        'onsuccess': onSuccess,
+        'onfailure': onFailure
+    });
+}
+function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+        $('.userContent').html('');
+        $('#gSignIn').slideDown('slow');
+    });
+}
+//]]>
+</script>
+</body>
+</html>
